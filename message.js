@@ -1,6 +1,6 @@
 const title = document.getElementById("title");
 
-const titleText = "Dear Pasandida Aurat,";
+const titleText = "Dear Diksha,";
 
 let titleIndex = 0;
 
