@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="top">
+
+        <div class="dots">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+        </div>
+
+        <div class="title">
+            birthday-star.gallery
+        </div>
+
+        <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <h1>📸 Your Beautiful Memories</h1>
+
+    <p>
+        Every picture tells a story. ❤️
+    </p>
+
+    <div class="gallery">
+
+        <img src="images/photo1.jpg" alt="">
+        <img src="images/photo2.jpg" alt="">
+        <img src="images/photo3.jpg" alt="">
+        <img src="images/photo4.jpg" alt="">
+        <img src="images/photo5.jpg" alt="">
+        <img src="images/photo6.jpg" alt="">
+
+    </div>
+
+    <button onclick="window.location.href='message.html'">
+        Continue 💖
+    </button>
+
+</div>
+
+<div class="popup" id="popup">
+
+    <img id="popupImg">
+
+</div>
+
+<script>
+
+const popup=document.getElementById("popup");
+const popupImg=document.getElementById("popupImg");
+
+document.querySelectorAll(".gallery img").forEach(img=>{
+
+    img.onclick=()=>{
+
+        popup.style.display="flex";
+
+        popupImg.src=img.src;
+
+    }
+
+});
+
+popup.onclick=()=>{
+
+    popup.style.display="none";
+
+}
+
+</script>
+<audio id="bgMusic" loop>
+    <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<script src="music.js"></script>
+</body>
+</html>
